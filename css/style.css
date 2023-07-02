@@ -378,6 +378,10 @@ letter-spacing: 0.02em;
     padding: 12px 24px;
     border: 1px solid var(--buttons-boarders-color);
     border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-portfolio-list{
@@ -401,12 +405,22 @@ letter-spacing: 0.02em;
     flex-wrap: wrap;
     }
 
-.projects-cards{
-width: calc((100% - 48px) / 3);
+.projects-links{
+display: block;
+transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects-cards:hover, .projects-cards:focus{
-box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+.projects-links:hover .projects-name-container .card-description{
+    transform: translateY(0%);
+}
+
+.projects-links:hover, .projects-links:focus{
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+
+.projects-cards{
+width: calc((100% - 48px) / 3);
 }
 
 .projects-name-container{

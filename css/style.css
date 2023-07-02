@@ -268,18 +268,66 @@ gap:24px;
     padding-bottom: 120px;
 }
 
+
+/* section Team */
 .title-team{
     margin-bottom: 72px;
 }
+
 .team-list{
     display: flex;
     gap:24px;
     flex-wrap: wrap;
 }
+
 .team-list .card{
 width: calc((100%-3*24px)/4);
 border-radius: 0px 0px 4px 4px;
 }
+
+.card-titles.team {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.team-names-container {
+    padding: 32px 16px;
+    width: 264px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-team {}
+
+.team-list .card {
+    width: 264px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.card-description.team {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.social-med-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-brand-color) ;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.social-med-links:hover{
+    background-color: var(--active-color) ;
+}
+.social-media-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:24px;
+    }
+
 
 .section-titles{
     font-weight: 700;
@@ -300,26 +348,7 @@ letter-spacing: 0.02em;
 .card{
     background-color: var(--background-card-color);
 }
-.card-titles.team{
-    text-align: center;
-    margin-bottom: 8px;
-    }
-.team-names-container{
-    padding: 32px 16px;
-    width: 264px;
-    display: flex;
-    flex-direction: column;
-    
-}
-.img-team{
-}
-.team-list .card{
-    width: 264px;
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-}
-.card-description.team {
-    text-align: center;
-}
+
 
 .section-team-style{
     background-color: var(--light-section-color);
@@ -431,4 +460,19 @@ border: 1px solid var(--customer-icons-active-color);
 .footer-text {
     color: var(--light-footer-text);
     max-width: 264px;
+}
+.footer-bold-text{
+    color: var(--light-footer-text);
+        max-width: 264px;
+        font-weight: 500;
+}
+.footer-social-med-par{
+margin-bottom: 16px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: baseline;
+    align-items: flex-start;
+    gap:120px;
 }

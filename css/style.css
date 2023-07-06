@@ -590,3 +590,40 @@ stroke:;
     align-items: center;
 
 }
+
+/* overlay-PORTFOLIO PAGE */
+.projects-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay-projects{
+    position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+justify-content: center;
+    align-items: center;
+    background-color: var(--primary-brand-color);
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    transform: translateY(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.projects-links:hover .overlay-projects{
+    transform: translateY(0);
+}
+
+.overlay-description{
+    width: 296px;
+    font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+        color: var(--light-section-color);
+}

@@ -131,12 +131,16 @@ font-family: 'Raleway', sans-serif;
     padding-bottom: 24px;
     padding-top: 24px;
     position:relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-links.active{
+   color: var(--active-color); 
 }
 
 .nav-links.active::after{
 content:"";
 position:absolute;
-bottom: -4px;;
+bottom: -1px;;
 left:0;
 display:block;
 width: 100%;
@@ -219,6 +223,7 @@ gap:48px;
     border: 0;
     min-width: 169px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover, .hero-button:focus{
@@ -549,8 +554,9 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background-color: rgba(46, 47, 66, 0.70) ;
+background-color: rgba(46, 47, 66, 0.4),;
 z-index: 100%;
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden{
@@ -569,10 +575,12 @@ height: 584px;
 border-radius: 4px;
 background-color: #FCFCFC;
 box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon{
 stroke:;
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn{
@@ -588,8 +596,24 @@ stroke:;
 
     display: flex;
     align-items: center;
-
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.modal-close-btn:hover, .modal-close-btn:focus{
+background-color: var(--active-color);
+border: none;
+}
+
+.modal-close-btn:hover.modal-icon{
+fill:var(--light-text-color)
+}
+
+.modal-close-btn:focus.modal-icon {
+    fill: var(--light-text-color)
+}
+
 
 /* overlay-PORTFOLIO PAGE */
 

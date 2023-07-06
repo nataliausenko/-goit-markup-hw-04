@@ -609,11 +609,11 @@ border: none;
 }
 
 .modal-close-btn:hover .modal-icon{
-fill:var(--light-text-color)
+fill:var(--light-text-color);
 }
 
 .modal-close-btn:focus .modal-icon {
-    fill: var(--light-text-color)
+    fill: var(--light-text-color);
 }
 
 

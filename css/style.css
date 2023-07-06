@@ -608,11 +608,11 @@ background-color: var(--active-color);
 border: none;
 }
 
-.modal-close-btn:hover.modal-icon{
+.modal-close-btn:hover .modal-icon{
 fill:var(--light-text-color)
 }
 
-.modal-close-btn:focus.modal-icon {
+.modal-close-btn:focus .modal-icon {
     fill: var(--light-text-color)
 }
 

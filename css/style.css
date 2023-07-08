@@ -29,6 +29,9 @@
 --social-med-icons-color:#f4f4fd;
 --social-med-footer-active:#31d0aa;
 --modal-backgr-color:#FCFCFC;
+--modal-light-icon-color:#FFFFFF;
+--label-modal-text:#8E8F99;
+
 }
 /* Reset */
 h1,h2,h3,h4,h5,h6,p{
@@ -548,6 +551,18 @@ margin-bottom: 16px;
     fill: var(--social-med-icons-color);
 }
 
+.foot-button{
+    padding: 8px 24px;
+    border: none;
+    background-color: var(--primary-brand-color);
+    color:var(--light-text-color);
+    border-radius: 4px;
+}
+
+.foot-button{
+    background-color: var(--active-color);
+}
+
 /* Modal window */
 .backdrop{
 position: fixed;
@@ -567,6 +582,10 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
 }
 
 .modal{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
 position: absolute;
 top: 50%;
 left: 50%;
@@ -578,6 +597,7 @@ border-radius: 4px;
 background-color: #FCFCFC;
 box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
 transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+padding: 24px;
 }
 
 .modal-icon{
@@ -603,18 +623,151 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover, .modal-close-btn:focus{
-background-color: #404bbf;
+background-color:var(--active-color);
 border: none;
 }
 
 .modal-close-btn:hover .modal-icon{
-fill:#ffffff;
+fill:var(--modal-light-icon-color);
 }
 
 .modal-close-btn:focus .modal-icon {
-    fill: #ffffff;
+    fill:var(--modal-light-icon-color);
 }
 
+.modal-title{
+color: var(--dark-brand-color-text);
+text-align: center;
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.32px;
+margin-top: 48px;
+margin-bottom: 16px;
+
+}
+
+.label-modal{
+    color: var(--label-modal-text);
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.48px;
+    position: relative;
+}
+
+.input-modal{
+width: 360px;
+height: 40px;
+border-radius: 4px;
+border: 1px solid rgba(46, 47, 66, 0.40);
+margin:0 auto;
+padding-left: 38px;
+}
+
+.label-modal:hover .input-modal{
+    border: 1px solid var(--primary-brand-color);
+}
+
+.label-modal:focus .input-modal {
+    border: 1px solid var(--primary-brand-color);
+}
+
+.input-container{
+    margin-bottom: 8px;
+}
+
+.textarea-modal::placeholder{
+    color: rgba(46, 47, 66, 0.40);
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.48px;
+}
+
+.textarea-modal{
+    resize: none;
+    width: 360px;
+    min-height: 120px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 12px;
+    color: currentColor;
+}
+
+.textarea-modal:hover{
+border: 1px solid var(--primary-brand-color);
+}
+
+.form:focus-within .input-modal{
+border: 1px solid var(--primary-brand-color);
+}
+
+.form:focus-within .input-icons{
+    fill: var(--primary-brand-color);
+}
+
+
+
+.label-modal:hover + .textarea-modal {
+    border: 1px solid var(--primary-brand-color);
+}
+.label-modal:focus + .textarea-modal{
+    border: 1px solid var(--primary-brand-color);
+}
+
+.checkbox-modal{
+margin-top: 8px;
+margin-bottom: 24px;
+}
+
+.privacy-pol-text{
+color: var(--primary-brand-color);
+text-decoration: underline;
+}
+
+.modal-button{
+    border: none;
+    padding: 16px 32px;
+    background-color: var(--primary-brand-color);
+    color: var(--light-text-color);
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.64px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    min-width: 169px;
+    min-height: 56px;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+.modal-button:hover, .modal-button:focus{
+    background-color: var(--active-color);
+}
+
+.input-icons{
+    fill: var(--dark-brand-color);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    margin-left: 16px;
+
+    /* margin-bottom: 28px; */
+}
+
+.label-modal:hover .input-icons{
+fill: var(--primary-brand-color);
+}
+
+.label-modal:focus .input-icons {
+    fill: var(--primary-brand-color);
+}
+
+/* Modal window */
 
 /* overlay-PORTFOLIO PAGE */
 
@@ -640,7 +793,6 @@ top: 0;
     width: 360px;
     height: 300px;
 }
-
 
 .projects-links:hover .overlay-description{
 transform: translateY(0%);
